@@ -68,7 +68,7 @@ if __name__ == "__main__":
         init = int(args.init, 10)
     val = init
     # Compute the output sequence
-    for i in range(0, args.count):
+    for _ in range(args.count):
         if args.radix == "dec":
             print("{:d}".format(val))
         elif args.radix == "hex":

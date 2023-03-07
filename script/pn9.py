@@ -37,9 +37,9 @@ if __name__ == "__main__":
 
     sequence_length = 2 ** PN9_LFSR_LENGTH - 1
     lfsr = PN9_LFSR_INIT
-    for i in range(sequence_length):
+    for _ in range(sequence_length):
         pn9_word = 0
-        for j in range(WORD_LENGTH):
+        for _ in range(WORD_LENGTH):
             msb = (lfsr >> (PN9_LFSR_LENGTH - 1)) & 0x1
             pn9_word = (pn9_word << 1) | msb
             lfsr = next_pn9_lfsr(lfsr)
